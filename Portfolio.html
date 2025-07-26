@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. Nishanth Chakkravarthy | AI Enthusiast</title>
+    <meta name="description" content="The creative portfolio of R. Nishanth Chakkravarthy, a passionate AI enthusiast and student developer.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles & Theme -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a1a; /* Deep space blue */
+            color: #e0e0e0;
+        }
+        .text-accent-blue { color: #00BFFF; }
+        .text-accent-magenta { color: #9f7aea; }
+        .bg-accent-blue { background-color: #00BFFF; }
+        .border-accent-blue { border-color: #00BFFF; }
+        .shadow-glow-blue { box-shadow: 0 0 15px rgba(0, 191, 255, 0.5), 0 0 5px rgba(0, 191, 255, 0.7); }
+        .shadow-glow-magenta { box-shadow: 0 0 15px rgba(159, 122, 234, 0.5), 0 0 5px rgba(159, 122, 234, 0.7); }
+
+        /* Navigation Active State */
+        nav a.active {
+            color: #00BFFF;
+            font-weight: 600;
+        }
+
+        /* Custom Animated Background */
+        #particles-js {
+            position: fixed; /* Changed to fixed to persist across pages */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0; /* Placed in the background layer */
+        }
+        
+        /* Wrapper for content to appear above particles */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Page Transition Animations */
+        .page-section {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        }
+        .page-transition-out {
+            opacity: 0;
+            transform: scale(0.98) translateY(10px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00BFFF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- This div holds the persistent animated background -->
+    <div id="particles-js"></div>
+
+    <!-- This wrapper holds all content that should appear ON TOP of the background -->
+    <div class="content-wrapper">
+        <!-- Header & Navigation -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-opacity-80 backdrop-blur-lg border-b border-gray-800/50" style="background-color: rgba(10, 10, 26, 0.5);">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold tracking-wider text-white uppercase nav-link">
+                    RNC
+                </a>
+                <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wider">
+                    <a href="#home" class="nav-link hover:text-accent-blue transition-colors duration-300 active">Home</a>
+                    <a href="#about" class="nav-link hover:text-accent-blue transition-colors duration-300">About</a>
+                    <a href="#skills" class="nav-link hover:text-accent-blue transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-accent-blue transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-accent-blue transition-colors duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </nav>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="#home" class="block py-2 px-6 text-sm hover:bg-gray-900/50 nav-link">Home</a>
+                <a href="#about" class="block py-2 px-6 text-sm hover:bg-gray-900/50 nav-link">About</a>
+                <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-900/50 nav-link">Skills</a>
+                <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-900/50 nav-link">Projects</a>
+                <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-900/50 nav-link">Contact</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="page-section min-h-screen flex items-center justify-center text-center">
+                <div class="container mx-auto px-6" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                        R. Nishanth Chakkravarthy
+                    </h1>
+                    <p class="mt-4 text-lg md:text-2xl font-light">
+                        An <span class="font-semibold text-accent-blue">AI Enthusiast</span> & Creative <span class="font-semibold text-accent-magenta">Problem Solver</span>
+                    </p>
+                    <p class="mt-6 max-w-3xl mx-auto text-gray-400">
+                        Pursuing B.Tech in IT, with a deep passion for building intelligent systems and user-centric web applications that make a difference.
+                    </p>
+                    <div class="mt-10">
+                        <a href="#projects" class="nav-link bg-accent-blue text-black font-bold py-3 px-8 rounded-full text-lg uppercase tracking-wider hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-glow-blue">
+                            Explore My Work
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="page-section py-24 md:py-32">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                        About <span class="text-accent-blue">Me</span>
+                    </h2>
+                    <div class="grid lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
+                            <!-- Image Fixed: Replace the src with a permanent link to your photo -->
+                            <img src="https://placehold.co/500x500/0a0a1a/00BFFF?text=Your+Photo+Here" alt="R. Nishanth Chakkravarthy" class="rounded-lg shadow-2xl w-full h-auto object-cover border-4 border-gray-800 transform hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="200">
+                            <h3 class="text-3xl font-bold text-white mb-4">Driven by Curiosity & Code</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Hi, I’m R. Nishanth Chakkravarthy, currently pursuing my B.Tech and deeply passionate about AI, Web Development, and solving real-world problems through technology. I love building things, exploring data, and constantly improving my skills through hands-on learning. I'm driven by curiosity, creativity, and a desire to make a difference.
+                            </p>
+                            <div class="mt-8 space-y-6">
+                                <div>
+                                    <h4 class="text-xl font-semibold text-accent-blue mb-2">My Philosophy</h4>
+                                    <p class="text-gray-400">I believe technology's greatest power lies in its ability to augment human potential. My goal is to build intuitive, intelligent tools that are not just functional, but also a joy to use.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-accent-blue mb-2">Education</h4>
+                                    <p class="font-semibold text-white">B.Tech in Information Technology</p>
+                                    <!-- Year Updated -->
+                                    <p class="text-gray-400">PSNA College of Engineering and Technology, Dindigul (2024 - 2028)</p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <a href="resume.pdf" download class="inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-full border border-gray-700 hover:bg-accent-blue hover:text-black hover:border-accent-blue transition-all duration-300">
+                                    Download Resume
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="page-section py-24 md:py-32 bg-black/20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                        Technical <span class="text-accent-magenta">Skills</span>
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg">
+                        <!-- Skill Category: Languages -->
+                        <div class="bg-gray-900/30 p-6 rounded-lg border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-2xl font-bold text-accent-blue mb-6">Languages</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#3776AB" d="M117.44 51.74l-4.26 4.31v58.21h-58.3V56.05l-4.26-4.31L11.1 89.26V10h95.16v41.74z"/><path fill="#FFD43B" d="M10.43 77.42l4.26-4.3V13.74h58.3v59.38l4.26 4.3L117.43 38.3V0H21.64v77.42z"/><path fill="#306998" d="M64 128a64 64 0 0 1-45.25-18.75l31.12-31.12V58.46h28.26v19.67l31.12 31.12A63.99 63.99 0 0 1 64 128z"/><path fill="#FFE057" d="M64 0a64 64 0 0 1 45.25 18.75L78.13 49.87V69.54H50v-19.67L18.75 18.75A63.99 63.99 0 0 1 64 0z"/></svg> <span>Python</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#5968BA" d="M89.73 17.5H38.27c-3.53 0-6.43 2.9-6.43 6.43v80.14c0 3.53 2.9 6.43 6.43 6.43h51.46c3.53 0 6.43-2.9 6.43-6.43V23.93c0-3.53-2.9-6.43-6.43-6.43z"/><path fill="#FFF" d="M66.34 69.11c-2.34 2.1-5.1 3.22-8.32 3.22-5.46 0-9.28-3.3-9.28-8.52 0-5.3 3.82-8.6 9.28-8.6 3.22 0 5.98 1.12 8.32 3.22l-2.6 2.52c-1.68-1.44-3.3-2.26-5.72-2.26-3.38 0-5.46 2.18-5.46 5.86 0 3.68 2.08 5.86 5.46 5.86 2.42 0 4.04-.82 5.72-2.26l2.6 2.52zm17.6-11.6h-4.38v20.4h4.38V57.51zm8.38 0h-4.38v20.4h4.38V57.51z"/></svg> <span>C</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#F0DB4F" d="M0 0h128v128H0z"/><path d="M110.12 101.25c.67 2.4-1.2 4.4-3.8 5.1-2.5.7-4.8-1-5.5-3.4-.7-2.4 1.2-4.4 3.8-5.1 2.6-.6 4.8 1 5.5 3.4zm-14.3-3.6c1.3 2.1 0 4.8-2.3 5.9-2.4 1.1-5-.2-6.3-2.3-1.3-2.1 0-4.8 2.3-5.9 2.5-1.1 5.1.2 6.3 2.3zm-1.2-11c-2.3 5.7-8.3 8.3-13.9 6.2-5.6-2.2-8.6-8-6.3-13.7 2.3-5.7 8.3-8.3 13.9-6.2 5.7 2.2 8.6 8 6.3 13.7zm-22.1-1.3c-2.4 5.7-8.4 8.2-14 6-5.6-2.1-8.5-7.9-6.1-13.6s8.4-8.2 14-6c5.5 2.2 8.5 7.9 6.1 13.6zM46.42 20.35h15.9l-2.8 14.1h-13.1z"/><path d="M46.72 99.45h14.9l-2.2-10.9h-14.9l2.2 10.9zm-3.1-16.1h21.1l-2.9-14.7h-21.1l2.9 14.7zm-.1-20.2h27.1l-4-20.3h-27.1l4 20.3zm5.6-25.7h18.2L64 20.35h-18l5.8 16.9z"/></svg> <span>JavaScript (ES6)</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#E44D26" d="M22.2 114.24l-9.13-103.1L114.93 0l-9.13 103.1L64 128z"/><path fill="#F16529" d="M64 116.5l39.14-10.5L108.27 12H64z"/><path fill="#EBEBEB" d="M64 64.2h21.2l1.43-16.14H64V32h38.33l-.36 4.02-3.5 39.08H64zM64 76.8h17.4l-1.74 19.5-15.66 4.14v16.4l28.6-7.64.2-2.24 3.48-39.16H64z"/><path fill="#FFF" d="M64 64.2V48.06H45.23L44.2 32H64V12H27.1l3.8 43.1h33.1v16.2H35.48L32 101.4l32 8.6v-16.4l-16.1-4.3z"/></svg> <span>HTML5</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path fill="#0070BA" d="M22.2 114.24l-9.13-103.1L114.93 0l-9.13 103.1L64 128z"/><path fill="#29A9DF" d="M64 116.5l39.14-10.5L108.27 12H64z"/><path fill="#EBEBEB" d="M78.65 48.05H64v16.1h13.2L76.1 76.8H64v16.1h21.7l.36-4.02 2.8-31.73.36-4.1z"/><path fill="#FFF" d="M49.35 48.05l-1.04 12.6h15.7v-12.6zm-1.05 31.75h15.7V64.25H45.5l-1.04-11.7H32l2.8 31.75h14.55zM64 92.9v12.6l21.9-5.9.7-7.9H73.5l-.7 7.2z"/></svg> <span>CSS3</span></div>
+                            </div>
+                        </div>
+                        <!-- Skill Category: Frameworks & Tools -->
+                        <div class="bg-gray-900/30 p-6 rounded-lg border border-gray-800" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-2xl font-bold text-accent-blue mb-6">Frameworks & Tools</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current text-white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> <span>Git & GitHub</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3" viewBox="0 0 54 33" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M27 0c-7.2 0-13.1 5.9-13.1 13.1 0 5.3 3.1 9.8 7.6 11.9l4.1-7.1-1.1-1.8c-.8-1.3-1.2-2.8-1.2-4.3 0-4.3 3.5-7.8 7.8-7.8s7.8 3.5 7.8 7.8c0 1.5-.4 2.9-1.2 4.3l-1.1 1.8 4.1 7.1c4.5-2.1 7.6-6.6 7.6-11.9C40.1 5.9 34.2 0 27 0zM13.1 19.9c-4.5 2.1-7.6 6.6-7.6 11.9C5.5 32.1 0 33 0 33s3.1-1.4 5.5-3.1c2.4-1.7 4.1-4.2 4.8-7l2.8-4.9z" fill="#38bdf8"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M40.1 19.9c4.5 2.1 7.6 6.6 7.6 11.9 0 .9 5.5 1.1 5.5 1.1s-3.1-1.4-5.5-3.1c-2.4-1.7-4.1-4.2-4.8-7l-2.8-4.9z" fill="#38bdf8"></path></svg> <span>Tailwind CSS</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 text-green-400" fill="currentColor" viewBox="0 0 118 128" xmlns="http://www.w3.org/2000/svg"><path d="M58.834 0C26.341 0 0 24.31 0 54.286v19.428C0 103.69 26.341 128 58.834 128c32.492 0 58.833-24.31 58.833-54.286V54.286C117.667 24.31 91.326 0 58.834 0zm38.25 73.714c0 19.22-17.14 34.8-38.25 34.8-21.11 0-38.25-15.58-38.25-34.8V54.286c0-19.22 17.14-34.8 38.25-34.8 21.11 0 38.25 15.58 38.25 34.8v19.428zM50.414 41.25l-9.08 15.11 9.08 15.1h-5.83l-6.16-10.2-3.05 5.06v5.14h-5.23V41.25h5.23v10.1l9.25-15.16h5.83z"/></svg> <span>Node.js (Basic)</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.13 0 5 3.13 5 7c0 1.93.78 3.68 2.04 4.96L5.06 24h3.48l1.76-10.56c.18.04.36.06.54.06 3.87 0 7-3.13 7-7s-3.13-7-7-7zm0 2c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5z"/></svg> <span>Flask (Learning)</span></div>
+                            </div>
+                        </div>
+                        <!-- Skill Category: Core Concepts -->
+                        <div class="bg-gray-900/30 p-6 rounded-lg border border-gray-800" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="text-2xl font-bold text-accent-blue mb-6">Core Concepts</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current text-accent-magenta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2h-2zm0-4V7h2v6h-2z"/></svg> <span>Problem Solving</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current text-accent-magenta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 18h-2v-1h2v1zm-4 0h-2v-1h2v1zm-4 0H9v-1h2v1zm-4 0H5v-1h2v1zm12-4h-2v-1h2v1zm-4 0h-2v-1h2v1zm-4 0H9v-1h2v1zm-4 0H5v-1h2v1zm12-4h-2V9h2v1zm-4 0h-2V9h2v1zm-4 0H9V9h2v1zm-4 0H5V9h2v1zm12-4h-2V5h2v1zm-4 0h-2V5h2v1zm-4 0H9V5h2v1zm-4 0H5V5h2v1z"/></svg> <span>Data Structures & Algorithms</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current text-accent-magenta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5L12 2zm-1.17 8.83L2 15.25V17l10 5 10-5v-1.75l-8.83-4.42-1.17 1z"/></svg> <span>Object-Oriented Programming</span></div>
+                                <div class="flex items-center"><svg class="w-6 h-6 mr-3 fill-current text-accent-magenta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.5 2h-19A1.5 1.5 0 001 3.5v17A1.5 1.5 0 002.5 22h19a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0021.5 2zM14 20h-4v-1h4v1zm6-3H4V4h16v13z"/></svg> <span>Responsive Web Design</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="page-section py-24 md:py-32">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                        Featured <span class="text-accent-blue">Projects</span>
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 flex flex-col hover:border-accent-magenta transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-xl font-bold text-white mb-2">AI Chatbot for Symptom Analysis</h3>
+                            <p class="text-gray-400 mb-4 text-sm leading-relaxed flex-grow">A web-based chatbot that helps users understand potential symptoms by chatting naturally. Integrated Gemini AI for intelligent response. Built as part of a doctor-patient booking system.</p>
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="bg-gray-800 text-xs font-medium px-2.5 py-1 rounded-full text-accent-blue">Python</span>
+                                    <span class="bg-gray-800 text-xs font-medium px-2.5 py-1 rounded-full text-accent-blue">Gemini AI</span>
+                                    <span class="bg-gray-800 text-xs font-medium px-2.5 py-1 rounded-full">HTML/CSS</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-auto">
+                                <a href="https://snapdoc-1.onrender.com" target="_blank" class="w-1/2 text-center bg-accent-blue text-black font-semibold py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-300">Live Demo</a>
+                                <a href="https://github.com/Nishanth-RNC/SnapDoc.git" target="_blank" class="w-1/2 text-center bg-gray-800 text-white font-semibold py-2 px-4 rounded-md border border-gray-700 hover:bg-gray-700 transition duration-300">Source</a>
+                            </div>
+                        </div>
+                        <!--Add more Projects here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="page-section py-24 md:py-32 bg-black/20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                        Get In <span class="text-accent-magenta">Touch</span>
+                    </h2>
+                    <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">I'm currently available for freelance work and open to discussing new projects. Let's create something amazing together!</p>
+                    
+                    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                        <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
+                            <a href="tel:+919092564020" class="flex items-center gap-4 group">
+                                <div class="bg-gray-800 p-3 rounded-full border border-gray-700 group-hover:border-accent-blue transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 text-accent-blue"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                                <div>
+                                    <h4 class="font-bold text-white group-hover:text-accent-blue transition-colors">Phone</h4>
+                                    <p class="text-gray-400">+91 90925 64020</p>
+                                </div>
+                            </a>
+                            <a href="mailto:nishanth.chakkravathy2020@gmail.com" class="flex items-center gap-4 group">
+                                <div class="bg-gray-800 p-3 rounded-full border border-gray-700 group-hover:border-accent-blue transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 text-accent-blue"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                                <div>
+                                    <h4 class="font-bold text-white group-hover:text-accent-blue transition-colors">Email</h4>
+                                    <p class="text-gray-400">nishanth.chakkravathy2020@gmail.com</p>
+                                </div>
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <div class="flex space-x-4 mt-4">
+                                    <a href="https://github.com/Nishanth-RNC" target="_blank" class="text-gray-500 hover:text-accent-blue transition-colors"><svg class="w-7 h-7" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.29c0 .319.19.694.824.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                                    <a href="https://www.linkedin.com/in/nishanth-chakkravarthy-738a3132a" target="_blank" class="text-gray-500 hover:text-accent-blue transition-colors"><svg class="w-7 h-7" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-delay="200">
+                            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                                <input type="text" name="name" placeholder="Your Name" required class="w-full bg-gray-900/70 border-2 border-gray-700 rounded-md p-3 focus:border-accent-magenta focus:outline-none transition-colors">
+                                <input type="email" name="email" placeholder="Your Email" required class="w-full bg-gray-900/70 border-2 border-gray-700 rounded-md p-3 focus:border-accent-magenta focus:outline-none transition-colors">
+                                <textarea name="message" placeholder="Your Message" rows="5" required class="w-full bg-gray-900/70 border-2 border-gray-700 rounded-md p-3 focus:border-accent-magenta focus:outline-none transition-colors"></textarea>
+                                <button type="submit" class="w-full bg-accent-magenta text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition duration-300 shadow-glow-magenta">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-gray-800/50">
+            <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+                 &copy; 2025 R. Nishanth Chakkravarthy | Built with Passion & Code
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate on Scroll
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        // Particles.js configuration for animated background
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+                "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 3, "random": true, "anim": { "enable": false } },
+                "line_linked": { "enable": true, "distance": 150, "color": "#4a5568", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+
+        // Single Page Application Navigation Logic with Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            function showPage(pageId) {
+                const targetPage = document.querySelector(pageId);
+                const currentPage = document.querySelector('.page-section:not(.hidden)');
+                
+                if (currentPage && currentPage !== targetPage) {
+                    currentPage.classList.add('page-transition-out');
+                    
+                    setTimeout(() => {
+                        currentPage.classList.add('hidden');
+                        currentPage.classList.remove('page-transition-out');
+
+                        targetPage.classList.remove('hidden');
+                        setTimeout(() => {
+                           targetPage.classList.remove('page-transition-out');
+                           AOS.refresh(); // Refresh AOS to trigger animations on the new page
+                        }, 20);
+
+                    }, 400); // Match CSS transition duration
+                } else if (!currentPage) {
+                    targetPage.classList.remove('hidden');
+                    targetPage.classList.remove('page-transition-out');
+                }
+
+                // Update nav link active states
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === pageId);
+                });
+                
+                // Close mobile menu
+                mobileMenu.classList.add('hidden');
+                
+                window.scrollTo(0, 0);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = link.getAttribute('href');
+                    showPage(pageId);
+                });
+            });
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            const initialPageId = '#home';
+            pages.forEach(page => {
+                if ('#' + page.id !== initialPageId) {
+                    page.classList.add('hidden', 'page-transition-out');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
